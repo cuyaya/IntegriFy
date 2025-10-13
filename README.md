@@ -9,9 +9,12 @@ Deepfake Detection Web System using Explainable AI
 | **CORS setup**          | Frontend connects from browser → must enable in Flask   | `from flask_cors import CORS; CORS(app)` | ✅ Yes     
 | **Firebase Project**    | Uses same Firebase project config (API key, project ID) | (Optional, may not need Firebase)        | ✅ Yes (if both use) |
 | **Repository Folder**   | `frontend/`                                             | `backend/`                               | ✅ Shared repo       |
-| **Branch**              | Both can stay on `main`                                 | Same                                     | ✅ Yes        
+| **Branch**              | Both can stay on `main`                                 | Same                                     | ✅ Yes    
+
+
 Shared API Contract (Critical Agreement)
 You and Putri must use the same names for these items throughout the project:
+
 | Purpose                     | Variable / Value                                          | Description                                 |
 | --------------------------- | --------------------------------------------------------- | ------------------------------------------- |
 | **API Base URL**            | `https://api.integrify-model.com`                         | (Putri will provide actual URL once hosted) |
