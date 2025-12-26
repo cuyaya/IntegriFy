@@ -1,2 +1,10 @@
-Flask==3.0.3
-Flask-Cors==4.0.0
+Flask
+flask_cors
+tensorflow
+numpy
+opencv-python
+librosa
+scikit-learn
+matplotlib
+joblib
+shap
