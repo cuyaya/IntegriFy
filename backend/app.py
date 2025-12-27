@@ -15,6 +15,10 @@ import shap
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def home():
+    return "IntegriFy Backend Running!"
+
 # -------------------------
 # Configuration
 # -------------------------
