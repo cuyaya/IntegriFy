@@ -1,0 +1,10 @@
+Flask
+flask_cors
+tensorflow
+numpy
+opencv-python
+librosa
+scikit-learn
+matplotlib
+joblib
+shap
