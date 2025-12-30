@@ -17,7 +17,8 @@ CORS(
     app,
     origins=["https://integrify.live"],
     methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization"]
+    allow_headers=["Content-Type", "Authorization"],
+    supports_credentials=True  # allows cookies/auth headers if needed
 )
 # -------------------------
 # Configuration
