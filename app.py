@@ -1,7 +1,6 @@
 # app.py
 import os
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import cv2
 import numpy as np
@@ -13,13 +12,6 @@ import base64
 import shap
 
 app = Flask(__name__)
-CORS(
-    app,
-    origins=["https://integrify.live"],
-    methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization"],
-    supports_credentials=True  # allows cookies/auth headers if needed
-)
 # -------------------------
 # Configuration
 # -------------------------
