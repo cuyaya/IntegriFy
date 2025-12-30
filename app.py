@@ -14,10 +14,14 @@ import shap
 app = Flask(__name__)
 CORS(
     app,
-    origins=["https://integrify.live","https://integrify-dc501.web.app"],
+    origins=[
+        "https://integrify.live", 
+        "https://integrify-dc501.web.app"
+    ],
     methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type", "Authorization"]
 )
+
 # -------------------------
 # Configuration
 # -------------------------
