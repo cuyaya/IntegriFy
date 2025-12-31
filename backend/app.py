@@ -10,6 +10,8 @@ from tensorflow.keras.models import load_model # type: ignore
 import joblib
 import base64
 import shap
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 CORS(
