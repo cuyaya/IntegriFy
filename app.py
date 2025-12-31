@@ -22,6 +22,16 @@ CORS(
     allow_headers=["Content-Type", "Authorization"]
 )
 
+# Root route
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"status": "Backend is running"})
+
+# Health check route
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "Backend is healthy"})
+
 # -------------------------
 # Configuration
 # -------------------------
