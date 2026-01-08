@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "integrify-dc501",
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

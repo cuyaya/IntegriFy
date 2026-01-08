@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Integrify</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- Register Page -->
+  <div class="wrap" id="registerPage">
+    <div class="panel">
+      <h1>Get started now!</h1>
+      <p class="lead">Join the fight against deepfakes.<br/>Sign up to begin detecting fake media today.</p>
+      
+    <form id="registerForm">
+        <div class="field">
+            <label>Username</label>
+            <input class="input" type="text" placeholder="Username" id="registerUsername"/>
+        </div>
+        
+        <div class="field">
+            <label>Email</label>
+            <input class="input" type="email" placeholder="example@email.com" id="registerEmail" />
+        </div>
+        
+        <div class="field">
+            <label>Password</label>
+            <div class="password-wrapper">
+            <input class="input" type="password" placeholder="At least 6 characters" id="registerPassword"/>
+            <button type="button" class="toggle-password" id="toggleRegisterPassword">
+            <!-- Open eye -->
+            <svg class="eye-open" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z"/>
+            </svg>
+            <!-- Closed eye -->
+            <svg class="eye-closed" viewBox="0 0 24 24" width="20" height="20" style="display:none;">
+                <path d="M1 1l22 22M12 5c-5 0-9.27 3.11-11 7 1.73 3.89 6 7 11 7 2.13 0 4.12-.57 5.82-1.56M4.93 4.93l14.14 14.14"/>
+            </svg>
+        </button>
+        </div>
+        </div>
+      
+        <div class="checkbox-row">
+            <input type="checkbox" style="width:16px;height:16px" />
+            <label style="margin:0"><small>I agree to the <a href="#" class="link">terms & policies</a></small></label>
+        </div>
+      
+        <div style="text-align:center">
+            <button class="btn" type="button" id="registerBtn">Register</button>
+        </div>
+            <div class="muted-small">
+            <div style="margin-top:22px">Already have an account? <a href="#" class="link" onclick="showLogin()">Log in</a></div>
+            <div style="margin-top:12px">or<br/><a href="#" class="link" onclick="continueAsGuest()">Continue as guest</a></div>
+            <div class="footer">© 2025 ALL RIGHTS RESERVED</div>
+        </div>
+    </div>
+    <div class="hero-card"><img src="assets/logo.png" alt="Integrify Logo"></div>
+</div>
+
+<!-- Login Page -->
+<div class="wrap" id="loginPage" style="display:none">
+  <div class="panel">
+    <h1>Welcome Back 👋</h1>
+    <p class="lead">Sign in to start detecting and managing your media.</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label>Email</label>
+        <input class="input" type="email" placeholder="example@email.com" id="loginEmail" />
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <div class="password-wrapper">
+        <input class="input" type="password" placeholder="******" id="loginPassword" />
+        <button type="button" class="toggle-password" id="toggleLoginPassword">
+            <!-- Open eye -->
+            <svg class="eye-open" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z"/>
+            </svg>
+            <!-- Closed eye -->
+            <svg class="eye-closed" viewBox="0 0 24 24" width="20" height="20" style="display:none;">
+                <path d="M1 1l22 22M12 5c-5 0-9.27 3.11-11 7 1.73 3.89 6 7 11 7 2.13 0 4.12-.57 5.82-1.56M4.93 4.93l14.14 14.14"/>
+            </svg>
+        </button>
+        </div>
+      </div>
+      <div style="text-align:right;margin-bottom:18px">
+        <a class="link" href="#">Forgot Password?</a>
+      </div>
+      <div style="text-align:center">
+        <button class="btn" type="button" id="loginBtn">Log in</button>
+      </div>
+    </form>
+
+        <div class="muted-small">
+            <div style="margin-top:22px">Don't have an account? <a href="#" class="link" onclick="showRegister()">Register</a></div>
+            <div style="margin-top:12px">or<br/><a href="#" class="link" onclick="continueAsGuest()">Continue as guest</a></div>
+    </div>
+
+    <div class="footer">© 2025 ALL RIGHTS RESERVED</div>
+  </div>
+  <div class="hero-card"><img src="assets/logo.png" alt="Integrify Logo"></div>
+</div>
+
+
+<!-- HOMEPAGE -->
+<div class="homepage" id="homepage">
+    <div class="background-layer"></div>
+    <div class="container" id="container">
+        <div class="sidebar" id="sidebar">
+             <div class="sidebar-header">
+                <button class="icon-btn icon-person" id="profileBtn">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
+                </button>
+                <button class="icon-btn icon-dots" id="collapseSidebar">
+                    <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+                </button>
+            </div>
+
+            <div class="user-menu" id="userMenu">
+                <ul>
+                    <li id="logoutBtn">LogOut</li>
+                </ul>
+            </div>
+      
+            <!-- Search Box Added Here -->
+             <div class="search-box" style="margin-bottom:12px;">
+                <input
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search File Name" 
+                    onkeyup="searchFile()" 
+                    style="width:90%;padding:10px 12px;border-radius:8px;border:1px solid #e5e7eb;background:#f9fafb;font-size:14px;"
+                />
+            </div>
+            <!-- End Search Box -->
+      
+            <div class="file-section">
+                 <!-- History will be injected here by loadHistory() -->
+            </div>
+
+            <div class="sidebar-footer">
+                <h2>INTEGRIFY</h2>
+                <p>SHOW IT. SAY IT. PROVE IT.</p>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1>What You See Isn’t Always The Truth</h1>
+                <p>Learn the sign. Spot the fake.<br>Let’s fight to sustain integrity in every digital interaction.</p>
+                <button class="upload-btn" type="submit" id="uploadBtn"onclick="showUploadPage()">UPLOAD</button>
+            </div>
+            <div class="floating-dots" id="floatingDots">
+                <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Upload Page -->
+ <div class="upload-page" id="uploadPage">
+    <div class="upload-container">
+        <form id="uploadForm">
+            <div class="upload-header">File Upload</div>
+            <div class="upload-body">
+                <label class="upload-area" id="uploadArea">
+                    <div class="upload-icon">☁️</div>
+                    <p>Click or drag file to this area to upload</p>
+                    <input type="file" id="fileInput" accept=".wav,.mp3,.mp4" required />
+                </label>
+                <p style="font-size: 14px; color: #777;">Formats accepted are .wav, .mp3, .mp4, .avi</p>
+                <div class="file-info" id="fileInfo"></div>
+            </div>
+    
+            <div class="upload-footer">
+                <button class="cancel-btn" onclick="showHomepage()">Cancel</button>
+                <button class="continue-btn" type="button" id="continueBtn">Continue</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+  <!-- Result Page -->
+  <div class="result-page" id="resultPage">
+    <div class="result-container">
+        <div class="left">
+            <div class="logo">INTEGRIFY <small>SHOW IT, SAY IT, PROVE IT</small></div>
+            <video id="resultVideo" width="100%" controls style="border-radius:10px;"></video>
+            <div class="filename">Voice_clip.mp3</div>
+            
+            <div class="controls">
+                <button type="button" class="ctrl-btn" id="rewindBtn" aria-label="Rewind 10 seconds">
+                    <span class="ctrl-icon">⟲</span>
+                    <span class="ctrl-sub">10</span>
+                </button>
+                <button type="button" class="ctrl-btn pause" id="playPauseBtn" aria-label="Pause or play">
+                    <span class="ctrl-icon" id="playPauseIcon">❚❚</span>
+                </button>
+                <button type="button" class="ctrl-btn" id="forwardBtn" aria-label="Forward 10 seconds">
+                    <span class="ctrl-icon">⟳</span>
+                    <span class="ctrl-sub">10</span>
+                </button>
+            </div>
+            <a class="btn-res" href="#" onclick="showUploadPage()">Upload New File</a>
+            <a class="btn-save" href="#">Save</a>
+            <a class="btn-delete" href="#">Delete</a>
+            <a class="btn-back" href="#" onclick="showHomepage()">Back to Homepage</a>
+        </div>
+    
+        <div class="right">
+            <div class="big-fake">FAKE</div>
+            <div class="confidence">Confidence Level:</div>
+            <div class="percent">97%</div>
+            <div class="notes">
+                <h4>Spectrogram Anomalies</h4>
+                <p>The spectrogram shows unusual frequency patterns that are inconsistent with natural human speech, especially between 2–4kHz.</p>
+                <h4>Pausing and Breath Pattern</h4>
+                <p>Detected irregular breathing patterns and unnatural pauses between words.</p>
+            </div>
+            <div class="heatmap-block">
+                <h4>Highlighted Frames</h4>
+                <p class="heatmap-hint">The detector marks the areas most indicative of manipulation.</p>
+                <div class="heatmap-gallery" id="heatmapGallery"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="heatmap-modal" id="heatmapModal" aria-hidden="true">
+    <div class="heatmap-modal-backdrop" id="heatmapModalBackdrop"></div>
+    <div class="heatmap-modal-content" role="dialog" aria-modal="true" aria-label="Heatmap preview">
+        <button type="button" class="heatmap-modal-close" id="heatmapModalClose" aria-label="Close heatmap preview">×</button>
+        <img id="heatmapModalImage" alt="Highlighted frame preview" />
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/upload.js"></script>
+  
+</body>
+</html>
